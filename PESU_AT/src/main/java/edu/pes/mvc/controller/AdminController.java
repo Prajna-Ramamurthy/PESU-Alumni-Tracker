@@ -66,7 +66,7 @@ public class AdminController {
 		
 		theModel.addAttribute("alumni",alumni);
 		
-		return "dashboard/addalumni";
+		return "dashboard/addAlumni";
 	}
 	
 	@GetMapping("/delete-alumni")
