@@ -7,7 +7,7 @@ target
 src/main/webapp/META-INF
 .idea
 *.iml
-*.SAVE
+.SAVE
 .vscode
 
 # Compiled class file
