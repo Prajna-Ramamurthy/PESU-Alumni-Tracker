@@ -1,4 +1,4 @@
-package edu.pes.mvc;
+package edu.pes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

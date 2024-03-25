@@ -1,4 +1,4 @@
-package edu.pes.mvc.controller;
+package edu.pes.controller;
 
 
 import java.util.List;
