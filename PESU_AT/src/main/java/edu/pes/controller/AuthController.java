@@ -61,6 +61,6 @@ public class AuthController {
     public String listRegisteredUsers(Model model){
         List<UserDto> users = userService.findAllUsers();
         model.addAttribute("users", users);
-        return "dashboard/users";
+        return "admin/users";
     }
 }

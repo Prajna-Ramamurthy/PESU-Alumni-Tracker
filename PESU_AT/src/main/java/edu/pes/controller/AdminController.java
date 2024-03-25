@@ -36,7 +36,7 @@ public class AdminController {
 		
 		theModel.addAttribute("alumni",alumni);
 		
-		return "dashboard/addAlumni";
+		return "admin/addAlumni";
 	}
 	
 	@PostMapping("/add-alumni")
@@ -55,7 +55,7 @@ public class AdminController {
 		
 		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/alumniList";
+		return "admin/alumniList";
 	}
 
 	
@@ -66,7 +66,7 @@ public class AdminController {
 		
 		theModel.addAttribute("alumni",alumni);
 		
-		return "dashboard/addAlumni";
+		return "admin/addAlumni";
 	}
 	
 	@GetMapping("/delete-alumni")
@@ -86,7 +86,7 @@ public class AdminController {
 		
 		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/2019";
+		return "admin/2019";
 	}
 	
 	@GetMapping("/2020")
@@ -96,7 +96,7 @@ public class AdminController {
 		
 		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/2020";
+		return "admin/2020";
 	}
 	
 	
@@ -107,7 +107,7 @@ public class AdminController {
 		
 		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/2021";
+		return "admin/2021";
 	}
 	
 	
@@ -147,7 +147,7 @@ public class AdminController {
 		theModel.addAttribute("c",c);
 		
 		System.out.println("a="+a+"b="+b+"c="+c);
-		return "dashboard/chart";
+		return "admin/chart";
 	}
 }
 
@@ -188,7 +188,7 @@ public class AdminController {
 //	theModel.addAttribute("c",c);
 //	
 //	System.out.println("a="+a+"b="+b+"c="+c);
-//	return "dashboard/chart";
+//	return "admin/chart";
 //}
 
 
@@ -215,7 +215,7 @@ public class AdminController {
 //	
 //	
 //	
-//	return "dashboard/northalumniList";
+//	return "admin/northalumniList";
 //}
 //
 //@GetMapping("/alumni/2018")
@@ -225,7 +225,7 @@ public class AdminController {
 //	
 //	theModel.addAttribute("allalumni",list);
 //	
-//	return "dashboard/centralalumniList";
+//	return "admin/centralalumniList";
 //}
 //
 //@GetMapping("/south-kolkata")
@@ -235,6 +235,6 @@ public class AdminController {
 //	
 //	theModel.addAttribute("allalumni",list);
 //	
-//	return "dashboard/southalumniList";
+//	return "admin/southalumniList";
 //}
 
