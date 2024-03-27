@@ -73,7 +73,7 @@ public class UserController {
 //		
 //		theModel.addAttribute("allalumni",list);
 //		
-//		return "dashboard/2021";
+//		return "admin/2021";
 //	}
 }
 
@@ -114,7 +114,7 @@ public class UserController {
 //	theModel.addAttribute("c",c);
 //	
 //	System.out.println("a="+a+"b="+b+"c="+c);
-//	return "dashboard/chart";
+//	return "admin/chart";
 //}
 
 
@@ -141,7 +141,7 @@ public class UserController {
 //	
 //	
 //	
-//	return "dashboard/northalumniList";
+//	return "admin/northalumniList";
 //}
 //
 //@GetMapping("/alumni/2018")
@@ -151,7 +151,7 @@ public class UserController {
 //	
 //	theModel.addAttribute("allalumni",list);
 //	
-//	return "dashboard/centralalumniList";
+//	return "admin/centralalumniList";
 //}
 //
 //@GetMapping("/south-kolkata")
@@ -161,6 +161,6 @@ public class UserController {
 //	
 //	theModel.addAttribute("allalumni",list);
 //	
-//	return "dashboard/southalumniList";
+//	return "admin/southalumniList";
 //}
 
