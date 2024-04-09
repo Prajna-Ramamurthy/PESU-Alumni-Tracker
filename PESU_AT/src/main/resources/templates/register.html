@@ -61,6 +61,19 @@
                         </p>
                     </div>
                     <div class="form-group mb-3">
+                        <label class="form-label">PESU SRN</label>
+                        <input class="form-control"
+                               id="srn"
+                               name="srn"
+                               placeholder="Enter your PESU SRN"
+                               th:field="*{srn}"
+                               type="text"
+                        />
+                        <p th:errors="*{srn}" class="text-danger"
+                           th:if="${#fields.hasErrors('srn')}">
+                        </p>
+                    </div>
+                    <div class="form-group mb-3">
                         <label class="form-label">Email</label>
                         <input class="form-control"
                                id="email"
@@ -84,6 +97,33 @@
                         />
                         <p th:errors="*{password}" class="text-danger"
                            th:if="${#fields.hasErrors('password')}">
+                        </p>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label class="form-label">LinkedIn Profile</label>
+                        <input class="form-control"
+                               id="linkedinurl"
+                               name="linkedinurl"
+                               placeholder="Enter your LinkedIn Profile URL"
+                               th:field="*{linkedinurl}"
+                               type="text"
+                        />
+                        <p th:errors="*{linkedinurl}" class="text-danger"
+                           th:if="${#fields.hasErrors('linkedinurl')}">
+                        </p>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="form-label">Phonu Number</label>
+                        <input class="form-control"
+                               id="phonenum"
+                               name="phonenum"
+                               placeholder="Enter your Phone number"
+                               th:field="*{phonenum}"
+                               type="text"
+                        />
+                        <p th:errors="*{phonenum}" class="text-danger"
+                           th:if="${#fields.hasErrors('phonenum')}">
                         </p>
                     </div>
 

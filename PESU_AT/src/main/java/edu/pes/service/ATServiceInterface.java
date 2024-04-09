@@ -2,6 +2,7 @@ package edu.pes.service;
 
 import java.util.List;
 import edu.pes.entity.PESU_AT;
+import edu.pes.entity.User;
 
 
 public interface ATServiceInterface {
@@ -14,13 +15,13 @@ public interface ATServiceInterface {
 
 	public void deleteById(int theId);
 	
-	public List<PESU_AT> findByYear(String div);
+	public List<PESU_AT> findByYear(String year);
 
-	public List<PESU_AT> findByDept(String div);
+	public List<PESU_AT> findByDept(String dept);
 	
-	public List<PESU_AT> findByCourse(String div);
+	public List<PESU_AT> findByCourse(String course);
 	
-	public PESU_AT findBySrn(String div);
+	public PESU_AT findBySrn(String srn);
 	
-
+	public void updateUser(User user);
 }

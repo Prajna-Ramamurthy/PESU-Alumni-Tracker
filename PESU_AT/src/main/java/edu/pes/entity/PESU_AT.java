@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 import org.springframework.data.annotation.Transient;
@@ -15,9 +16,9 @@ import org.springframework.data.annotation.Transient;
 public class PESU_AT {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private int id;
+	private Long id;
 	
 	@Column(name = "name")
 	private String name;
@@ -67,12 +68,16 @@ public class PESU_AT {
 	private int click;
 
 
-	public int getId() {
+	@OneToOne(mappedBy = "pesu_at")
+    private User user;
+
+
+	public Long getId() {
 		return id;
 	}
 
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -218,6 +223,16 @@ public class PESU_AT {
 	}
 
 
+	public User getUser() {
+		return user;
+	}
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
 	@Override
 	public String toString() {
 		return "PESU_AT [id=" + id + ", name=" + name + ", year=" + year + ", course=" + course + ", dept=" + dept
@@ -225,10 +240,5 @@ public class PESU_AT {
 				+ address + ", phone=" + phone + ", achivements=" + achivements + ", placed=" + placed + ", image=" + image
 				+ ", click=" + click + "]";
 	}
-
-
-	
-
-
 
 }

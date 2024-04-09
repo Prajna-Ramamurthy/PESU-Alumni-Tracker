@@ -1,6 +1,7 @@
 package edu.pes.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,11 +33,28 @@ public class User
     @Column(nullable=false)
     private String password;
 
+    @Column(nullable=false)
+    private String srn;
+
+    @Column
+    private String linkedinurl;
+
+    @Column
+    private String phonenum;
+
     @ManyToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
     @JoinTable(
             name="users_roles",
             joinColumns={@JoinColumn(name="USER_ID", referencedColumnName="ID")},
             inverseJoinColumns={@JoinColumn(name="ROLE_ID", referencedColumnName="ID")})
     private List<Role> roles = new ArrayList<>();
+
+    @OneToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+    @JoinTable(name = "users_alumni", 
+      joinColumns = 
+        { @JoinColumn(name = "user_id", referencedColumnName = "id") },
+      inverseJoinColumns = 
+        { @JoinColumn(name = "pesu_at_id", referencedColumnName = "id") })
+    private PESU_AT pesu_at;
 
 }
