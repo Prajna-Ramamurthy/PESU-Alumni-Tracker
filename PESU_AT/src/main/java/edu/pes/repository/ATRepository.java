@@ -18,10 +18,4 @@ public interface ATRepository extends JpaRepository<PESU_AT, Integer> {
 	List<PESU_AT> findByCourse(String div);
 	
 	PESU_AT findBySrn(String div);
-	
-//	List<PESU_AT> findByArea(String area);
-	
-	//@Query(value="select distinct division from pujo")
-	//List<Pujo>  findDistinctById(String id);
-
 }

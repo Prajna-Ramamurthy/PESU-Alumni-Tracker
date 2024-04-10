@@ -90,8 +90,7 @@ public class UserService implements UserServiceInterface {
 
     private Role checkRoleExist() {
         Role role = new Role();
-        // Rama - role.setName("ROLE_ADMIN");
-        // Rama
+ 
         role.setName("ROLE_USER");
         return roleRepository.save(role);
     }

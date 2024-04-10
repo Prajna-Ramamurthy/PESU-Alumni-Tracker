@@ -1,22 +1,11 @@
 package edu.pes.dto;
 
-import jakarta.persistence.Entity;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.RequiredArgsConstructor;
 
-/*
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-*/
 
 @Data
 @NoArgsConstructor

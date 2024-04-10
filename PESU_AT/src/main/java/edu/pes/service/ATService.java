@@ -97,30 +97,5 @@ public class ATService implements ATServiceInterface {
 		}
 
 	}
-//
-//	@Override
-//	public List<PESU_AT> findByDivision(String div) {
-//	
-////		Optional<pesu_at> result=atRepository.findByDivision(div);
-////		
-////		List<pesu_at> pesu_at=null;
-////		
-////		if(result.isPresent())
-////		{
-////			pesu_at.add(result.get());
-////		}
-////		else {
-////			throw new RuntimeException("Did not find pesu_at div - " + div);
-////		}
-//		
-//		return atRepository.findByDivision(div);
-//	}
-//
-//
-//	@Override
-//	public List<PESU_AT> findByArea(String area) {
-//		
-//		return atRepository.findByArea(area);
-//	}
 
 }
