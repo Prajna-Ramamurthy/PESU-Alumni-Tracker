@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PESU AT - index</title>
-  
 
 	<link rel="icon" type="../vendor/image/png" href="Error/pic.jpg"/>
   <link rel="stylesheet" href="../pesuat/vendors/bootstrap/bootstrap.min.css">
@@ -40,107 +39,7 @@ The portal is aimed at maintaining a comprehensive database of all the alumni of
           </div>
         </div>
       </div>
-    </section>
-    
-    <section class="section-margin calc-60px">
-      <div class="container">
-       
-
-	   <div class="section-intro pb-60px">
-          <p>All Alumni 2019-2021</p>
-          <h2>2019  <span class="section-intro__style">Alumni</span></h2>
-        </div>
-        <div class="row">
-         
-
-		 <div class="col-md-6 col-lg-4 col-xl-3"  th:each="alumni : ${allalumni}" th:if="${alumni.year == '2019'}">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img"  th:src="${alumni.image}" alt="">
-           <ul class="card-product__imgOverlay">
-                 
-                </ul>
-              </div>
-              <div class="card-body">
-                <p><label th:text="${alumni.year}"></p>
-                <h4 class="card-product__title"><a th:href="@{/user/alumni(id=${alumni.id})}"><label th:text="${alumni.name}"> </a></h4>
-                <p class="card-product__price"><label th:text="${alumni.email}"></p>
-              </div>
-            </div>
-          </div>
-          
-          
-          
-          
-        </div>
-		
-		
-		
-		
-		
-		
-		
-	   <div class="section-intro pb-60px">
-          <p>All Alumni 2019-2021</p>
-          <h2>2020  <span class="section-intro__style">Alumni</span></h2>
-        </div>
-        <div class="row">
-         
- <div class="col-md-6 col-lg-4 col-xl-3"  th:each="alumni : ${allalumni}" th:if="${alumni.year == '2020'}">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img"  th:src="${alumni.image}"  alt="">
-           <ul class="card-product__imgOverlay">
-          
-                </ul>
-              </div>
-              <div class="card-body">
-                <p><label th:text="${alumni.year}"></p>
-                <h4 class="card-product__title"><a th:href="@{/user/alumni(id=${alumni.id})}"><label th:text="${alumni.name}"> </a></h4>
-                <p class="card-product__price"><label th:text="${alumni.email}"></p>
-              </div>
-            </div>
-          </div>
-          
-          
-          
-        </div>
-		
-		
-		
-		
-		
-		
-		
-	   <div class="section-intro pb-60px">
-          <p>All Alumni 2019-2021</p>
-          <h2>2021  <span class="section-intro__style">Alumni</span></h2>
-        </div>
-        <div class="row">
-         
-
-		 <div class="col-md-6 col-lg-4 col-xl-3"  th:each="alumni : ${allalumni}" th:if="${alumni.year == '2021'}">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" th:src="${alumni.image}"  alt="">
-           <ul class="card-product__imgOverlay">
-                 
-                </ul>
-              </div>
-              <div class="card-body">
-                <p><label th:text="${alumni.year}"></p>
-                <h4 class="card-product__title"><a th:href="@{/user/alumni(id=${alumni.id})}"><label th:text="${alumni.name}"> </a></h4>
-                <p class="card-product__price"><label th:text="${alumni.email}"></p>
-              </div>
-            </div>
-          </div>
-          
-          
-		
-		
-
-      </div>
-    </section>
+    </section>	   
    
     <section class="section-margin calc-60px">
       <div class="container">
@@ -168,35 +67,10 @@ The portal is aimed at maintaining a comprehensive database of all the alumni of
         </div>
       </div>
     </section>
-
-    <section class="subscribe-position">
-      <div class="container">
-        <div class="subscribe text-center">
-          <h3 class="subscribe__title">Get Update of Events by PESU AT</h3>
-          <p>Get the notifications before anyone</p>
-          <div id="mc_embed_signup">
-            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
-              <div class="form-group ml-sm-auto">
-                <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" >
-                <div class="info"></div>
-              </div>
-              <button class="button button-subscribe mr-auto mb-1" type="submit">Subscribe Now</button>
-              <div style="position: absolute; left: -5000px;">
-                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-              </div>
-
-            </form>
-          </div>
-          
-        </div>
-      </div>
-    </section>
+    
     <!-- ================ Subscribe section end ================= --> 
 
-    
-
   </main>
-
 
   <!--================ Start footer Area  =================-->	
 	<footer class="footer">
@@ -268,9 +142,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</div>
 		</div>
 	</footer>
+
 	<!--================ End footer Area  =================-->
-
-
 
   <script src="../pesuat/vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="../pesuat/vendors/bootstrap/bootstrap.bundle.min.js"></script>
