@@ -19,16 +19,16 @@ public class UserService implements UserServiceInterface {
     private UserRepository userRepository;
     private RoleRepository roleRepository;
     private PasswordEncoder passwordEncoder;
-    private ATService atService;
+    private AlumniService alumniService;
 
     public UserService(UserRepository userRepository,
                            RoleRepository roleRepository,
                            PasswordEncoder passwordEncoder,
-                           ATService atService) {
+                           AlumniService alumniService) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.passwordEncoder = passwordEncoder;
-        this.atService = atService;
+        this.alumniService = alumniService;
     }
 
     @Override
@@ -52,11 +52,11 @@ public class UserService implements UserServiceInterface {
 
         user.setRoles(Arrays.asList(role));
 
-        user.setPesu_at(atService.findBySrn(user.getSrn()));
+        user.setAlumni(alumniService.findBySrn(user.getSrn()));
 
         userRepository.save(user);
 
-        atService.updateUser(user);
+        alumniService.updateUser(user);
     }
 
     @Override

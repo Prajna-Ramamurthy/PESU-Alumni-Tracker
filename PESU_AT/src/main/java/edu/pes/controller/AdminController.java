@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import edu.pes.entity.PESU_AT;
-import edu.pes.service.ATService;
+import edu.pes.entity.Alumni;
+import edu.pes.service.AlumniService;
 
 
 @Controller
@@ -21,18 +21,19 @@ import edu.pes.service.ATService;
 public class AdminController {
 	
 
-	private ATService atService;
+	private AlumniService alumniService;
+
 	@Autowired   
-	public AdminController(ATService obj)
+	public AdminController(AlumniService obj)
 	{
-		this.atService=obj;
+		this.alumniService=obj;
 	
 	}
 
 	@GetMapping("/add-alumni")
 	public String Addalumni(Model theModel) {
 	
-		PESU_AT alumni=new PESU_AT();
+		Alumni alumni=new Alumni();
 		
 		theModel.addAttribute("alumni",alumni);
 		
@@ -40,10 +41,10 @@ public class AdminController {
 	}
 	
 	@PostMapping("/add-alumni")
-	public String Savealumni(@ModelAttribute("alumni") PESU_AT alumni) {
+	public String Savealumni(@ModelAttribute("alumni") Alumni alumni) {
 
 	
-		atService.save(alumni);
+		alumniService.save(alumni);
 	
 		return "redirect:/admin/add-alumni";
 	}
@@ -51,7 +52,7 @@ public class AdminController {
 	@GetMapping("/all-alumni")
 	public String Allalumni(Model theModel) {
 
-		List<PESU_AT> list=atService.findAll();
+		List<Alumni> list=alumniService.findAll();
 		
 		theModel.addAttribute("allalumni",list);
 		
@@ -62,7 +63,7 @@ public class AdminController {
 	@GetMapping("/update-alumni")
 	public String Updatealumni(@RequestParam("id") int theId,Model theModel) {
 
-		PESU_AT alumni=atService.findById(theId);
+		Alumni alumni=alumniService.findById(theId);
 		
 		theModel.addAttribute("alumni",alumni);
 		
@@ -72,7 +73,7 @@ public class AdminController {
 	@GetMapping("/delete-alumni")
 	public String Deletealumni(@RequestParam("id") int theId) {
 
-		atService.deleteById(theId);
+		alumniService.deleteById(theId);
 	
 		return "redirect:/admin/all-alumni";
 	}

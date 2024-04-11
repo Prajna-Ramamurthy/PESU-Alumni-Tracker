@@ -13,7 +13,7 @@ import org.springframework.data.annotation.Transient;
 
 @Entity
 @Table(name = "pesuat")
-public class PESU_AT {
+public class Alumni {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -68,7 +68,7 @@ public class PESU_AT {
 	private int click;
 
 
-	@OneToOne(mappedBy = "pesu_at")
+	@OneToOne(mappedBy = "alumni")
     private User user;
 
 
@@ -235,7 +235,7 @@ public class PESU_AT {
 
 	@Override
 	public String toString() {
-		return "PESU_AT [id=" + id + ", name=" + name + ", year=" + year + ", course=" + course + ", dept=" + dept
+		return "Alumni [id=" + id + ", name=" + name + ", year=" + year + ", course=" + course + ", dept=" + dept
 				+ ", srn=" + srn + ", cgpa=" + cgpa + ", chapter=" + chapter + ", email=" + email + ", address="
 				+ address + ", phone=" + phone + ", achivements=" + achivements + ", placed=" + placed + ", image=" + image
 				+ ", click=" + click + "]";

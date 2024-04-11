@@ -52,6 +52,6 @@ public class User
         { @JoinColumn(name = "user_id", referencedColumnName = "id") },
       inverseJoinColumns = 
         { @JoinColumn(name = "pesu_at_id", referencedColumnName = "id") })
-    private PESU_AT pesu_at;
+    private Alumni alumni;
 
 }

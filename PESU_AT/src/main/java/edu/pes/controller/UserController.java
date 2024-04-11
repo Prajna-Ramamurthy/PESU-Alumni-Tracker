@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import edu.pes.entity.PESU_AT;
-import edu.pes.service.ATService;
+import edu.pes.entity.Alumni;
+import edu.pes.service.AlumniService;
 
 
 @Controller
@@ -19,11 +19,11 @@ import edu.pes.service.ATService;
 public class UserController {
 	
 
-	private ATService atService;
+	private AlumniService alumniService;
 	@Autowired   
-	public UserController(ATService obj)
+	public UserController(AlumniService obj)
 	{
-		this.atService=obj;
+		this.alumniService=obj;
 	
 	}
 
@@ -32,7 +32,7 @@ public class UserController {
 	@GetMapping("/alumni")
 	public String Allalumni(@RequestParam("id") int theId,Model theModel) {
 
-		PESU_AT list=(PESU_AT) atService.findById(theId);
+		Alumni list=(Alumni) alumniService.findById(theId);
 		
 		int click=list.getClick();
 		
@@ -41,7 +41,7 @@ public class UserController {
 		list.setClick(click);
 		
 
-		atService.save(list);
+		alumniService.save(list);
 	
 		
 		theModel.addAttribute("list",list);
@@ -55,7 +55,7 @@ public class UserController {
 	@GetMapping("/index")
 	public String all(Model theModel) {
 
-		List<PESU_AT> list=atService.findAll();
+		List<Alumni> list=alumniService.findAll();
 		
 		theModel.addAttribute("allalumni",list);
 		

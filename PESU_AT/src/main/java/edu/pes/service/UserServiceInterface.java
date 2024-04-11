@@ -1,7 +1,7 @@
 package edu.pes.service;
 
 import edu.pes.dto.UserDto;
-import edu.pes.entity.PESU_AT;
+import edu.pes.entity.Alumni;
 import edu.pes.entity.User;
 
 import java.util.List;
